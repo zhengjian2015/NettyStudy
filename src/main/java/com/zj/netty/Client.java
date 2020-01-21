@@ -42,6 +42,9 @@ public class Client {
 
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            //优雅的关闭
+            group.shutdownGracefully();
         }
 
     }
